@@ -1,261 +1,251 @@
-<!doctype html>
-<html lang="en">
+﻿<!doctype html>
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gallery | Bengalure Bandhavya Charitable Trust (R)</title>
-  <meta name="description" content="Photo gallery of events, cultural programs, and activities of our community." />
-
-  <!-- Bootstrap CSS -->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles -->
-  <style>
-    .gallery-img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .gallery-img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 10px 25px rgba(0,0,0,.15);
-    }
-    .filter-btn.active {
-      background-color: #0d6efd;
-      color: #fff;
-    }
-  </style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Gallery | Bandhavya Bengaluru Charitable Trust (R)</title>
+  <meta name="description" content="Photo gallery of events, cultural programs and activities of Bandhavya Bengaluru community."/>
+  <link rel="icon" href="favicon.ico"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="assets/css/style.css" rel="stylesheet"/>
 </head>
-
 <body>
 
-<!-- ================= Header / Navbar ================= -->
-<header>
-  <nav class="navbar navbar-expand-lg bg-white border-bottom">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">ಬಾಂಧವ್ಯ ಬೆಂಗಳೂರು ಚಾರಿಟೆಬಲ್ ಟ್ರಸ್ಟ್ (ರಿ)</a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-         <!-- <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="events.html">Activities</a></li>
-          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>-->
-        </ul>
-      </div>
+<!-- ── Topbar ── -->
+<div class="topbar">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span><i class="bi bi-envelope me-1"></i><a href="mailto:bandhavyabangalore@gmail.com">bandhavyabangalore@gmail.com</a></span>
+    <span class="kannada" style="font-size:.82rem;color:rgba(255,255,255,.75);">ಬಾಂಧವ್ಯ ಬೆಂಗಳೂರು ಚಾರಿಟೆಬಲ್ ಟ್ರಸ್ಟ್ (ರಿ)</span>
+  </div>
+</div>
+
+<!-- ── Navbar ── -->
+<nav class="site-navbar" id="siteNavbar">
+  <div class="container h-100 d-flex align-items-center justify-content-between">
+    <a class="navbar-brand-logo" href="index.html"><img src="assets/images/logos/logo.png" alt="Bandhavya Bengaluru Logo" class="nav-logo"/><span class="navbar-brand-text kannada">ಬಾಂಧವ್ಯ ಬೆಂಗಳೂರು<br/><small>ಚಾರಿಟೆಬಲ್ ಟ್ರಸ್ಟ್ (ರಿ)</small></span></a>
+    <button class="navbar-toggler d-lg-none border-0 bg-transparent" type="button"
+            data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav"
+            aria-expanded="false" aria-label="Toggle navigation" style="font-size:1.4rem;color:var(--text);">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="collapse navbar-collapse d-lg-flex align-items-center gap-1" id="mainNav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="committee.html">Committee</a>
+      <a class="nav-link" href="achievements.html">Achievements</a>
+      <a class="nav-link active" href="gallery.html">Gallery</a>
+      <a class="nav-link" href="events.html">Events</a>
+      <a class="nav-link" href="index.html#contact">Contact</a>
+      <button class="btn-theme ms-2" id="themeToggle" title="Toggle dark mode"><i class="bi bi-moon-stars-fill" id="themeIcon"></i></button>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<!-- ── Page Header ── -->
+<header class="page-header">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Memories</span>
+      <h1 class="section-title">Gallery</h1>
+      <div class="divider"></div>
+      <p class="section-sub mb-0 kannada">ಕಾರ್ಯಕ್ರಮಗಳ ನೆನಪಿನ ಕ್ಷಣಗಳು</p>
+    </div>
+  </div>
 </header>
 
-<!-- ================= Page Title ================= -->
-<section class="py-5 bg-light">
-  <div class="container text-center">
-    <h1 class="fw-bold">Gallery</h1>
-    <p class="text-muted">
-      ಕಾರ್ಯಕ್ರಮಗಳ ನೆನಪಿನ ಕ್ಷಣಗಳು
-    </p>
-  </div>
-</section>
-
-<!-- ================= Filter Buttons ================= -->
-<section class="py-4">
-  <div class="container text-center">
-    <div class="btn-group flex-wrap" role="group">
-      <button class="btn btn-outline-primary filter-btn active" data-filter="all">All</button>
-      <button class="btn btn-outline-primary filter-btn" data-filter="events">Events</button>
-      <button class="btn btn-outline-primary filter-btn" data-filter="cultural">Cultural</button>
-      <button class="btn btn-outline-primary filter-btn" data-filter="meetings">Meetings</button>
+<!-- ── Filter ── -->
+<section class="py-4 bg-muted-section">
+  <div class="container text-center reveal">
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+      <button class="filter-btn active" data-filter="all">All Photos</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="cultural">Cultural</button>
+      <button class="filter-btn" data-filter="meetings">Meetings</button>
     </div>
   </div>
 </section>
 
-<!-- ================= Gallery Grid ================= -->
-<section class="pb-5">
-  <div class="container">
-    <div class="row g-4">
+<!-- ── Gallery Grid ── -->
+<section class="py-5">
+  <div class="container reveal">
+    <div class="row g-3" id="galleryGrid">
 
-      <!-- Event -->
-      <div class="col-sm-6 col-md-4 gallery-item events">
-        <img src="assets/images/gallery/g1.jpg"
-             class="gallery-img"
-             alt="Community Event"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g1.jpg">
+      <div class="col-sm-6 col-md-4 gallery-filter-item events">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g1.jpg">
+          <img src="assets/images/gallery/g1.jpg" alt="Community Event" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
       </div>
 
-      <div class="col-sm-6 col-md-4 gallery-item events">
-        <img src="assets/images/gallery/g2.jpg"
-             class="gallery-img"
-             alt="Annual Function"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g2.jpg">
-      </div>
-      <div class="col-sm-6 col-md-4 gallery-item cultural">
-        <img src="assets/images/gallery/g3.jpg"
-             class="gallery-img"
-             alt="Cultural Program"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g3.jpg">
+      <div class="col-sm-6 col-md-4 gallery-filter-item events">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g2.jpg">
+          <img src="assets/images/gallery/g2.jpg" alt="Annual Function" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
       </div>
 
-      <div class="col-sm-6 col-md-4 gallery-item cultural">
-        <img src="assets/images/gallery/g4.jpg"
-             class="gallery-img"
-             alt="Festival Celebration"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g4.jpg">
-      
-      <div class="col-sm-6 col-md-4 gallery-item events">
-        <img src="assets/images/gallery/g10.jpg"
-             class="gallery-img"
-             alt="Annual Function"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g10.jpg">
-      </div>
-      <div class="col-sm-6 col-md-4 gallery-item events">
-        <img src="assets/images/gallery/g11.jpg"
-             class="gallery-img"
-             alt="Annual Function"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g11.jpg">
-      </div>
-      <div class="col-sm-6 col-md-4 gallery-item events">
-        <img src="assets/images/gallery/g12.jpg"
-             class="gallery-img"
-             alt="Annual Function"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g12.jpg">
-      </div>
-<div class="col-sm-6 col-md-4 gallery-item events">
-        <img src="assets/images/gallery/g13.jpg"
-             class="gallery-img"
-             alt="Annual Function"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g13.jpg">
-      </div>
-      <div class="col-sm-6 col-md-4 gallery-item events">
-        <img src="assets/images/gallery/g14.jpg"
-             class="gallery-img"
-             alt="Annual Function"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g14.jpg">
-      </div>
-      <div class="col-sm-6 col-md-4 gallery-item events">
-        <img src="assets/images/gallery/g15.jpg"
-             class="gallery-img"
-             alt="Annual Function"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g15.jpg">
-      </div>
-      <!-- Cultural -->
-      <div class="col-sm-6 col-md-4 gallery-item cultural">
-        <img src="assets/images/gallery/g16.jpg"
-             class="gallery-img"
-             alt="Cultural Program"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g16.jpg">
+      <div class="col-sm-6 col-md-4 gallery-filter-item cultural">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g3.jpg">
+          <img src="assets/images/gallery/g3.jpg" alt="Cultural Program" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
       </div>
 
-      <div class="col-sm-6 col-md-4 gallery-item cultural">
-        <img src="assets/images/gallery/g17.jpg"
-             class="gallery-img"
-             alt="Festival Celebration"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g17.jpg">
+      <div class="col-sm-6 col-md-4 gallery-filter-item cultural">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g4.jpg">
+          <img src="assets/images/gallery/g4.jpg" alt="Festival Celebration" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
       </div>
 
-      <!-- Meetings -->
-      <div class="col-sm-6 col-md-4 gallery-item meetings">
-        <img src="assets/images/gallery/g5.jpg"
-             class="gallery-img"
-             alt="Committee Meeting"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g5.jpg">
+      <div class="col-sm-6 col-md-4 gallery-filter-item meetings">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g5.jpg">
+          <img src="assets/images/gallery/g5.jpg" alt="Committee Meeting" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
       </div>
-      <div class="col-sm-6 col-md-4 gallery-item events">
-        <img src="assets/images/gallery/g6.jpg"
-             class="gallery-img"
-             alt="Annual Function"
-             data-bs-toggle="modal"
-             data-bs-target="#imageModal"
-             data-img="assets/images/gallery/g6.jpg">
+
+      <div class="col-sm-6 col-md-4 gallery-filter-item events">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g6.jpg">
+          <img src="assets/images/gallery/g6.jpg" alt="Annual Function" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 gallery-filter-item events">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g10.jpg">
+          <img src="assets/images/gallery/g10.jpg" alt="Annual Function" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 gallery-filter-item events">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g11.jpg">
+          <img src="assets/images/gallery/g11.jpg" alt="Annual Function" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 gallery-filter-item events">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g12.jpg">
+          <img src="assets/images/gallery/g12.jpg" alt="Annual Function" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 gallery-filter-item events">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g13.jpg">
+          <img src="assets/images/gallery/g13.jpg" alt="Annual Function" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 gallery-filter-item events">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g14.jpg">
+          <img src="assets/images/gallery/g14.jpg" alt="Annual Function" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 gallery-filter-item events">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g15.jpg">
+          <img src="assets/images/gallery/g15.jpg" alt="Annual Function" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 gallery-filter-item cultural">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g16.jpg">
+          <img src="assets/images/gallery/g16.jpg" alt="Cultural Program" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 gallery-filter-item cultural">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="assets/images/gallery/g17.jpg">
+          <img src="assets/images/gallery/g17.jpg" alt="Festival Celebration" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ================= Image Modal (Lightbox) ================= -->
-<div class="modal fade" id="imageModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
+<!-- ── Lightbox Modal ── -->
+<div class="modal fade lightbox-modal" id="lightboxModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" style="position:relative;">
     <div class="modal-content">
-      <div class="modal-body p-0">
-        <img id="modalImage" src="" class="w-100 rounded">
+      <div class="modal-body p-2">
+        <button class="lightbox-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+        <img id="lightboxImg" src="" alt="Gallery image" style="border-radius:var(--radius-md);max-height:88vh;object-fit:contain;width:100%;"/>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ================= Footer ================= -->
-<footer class="bg-light border-top py-4">
-  <div class="container text-center">
-    <small>© <span id="year"></span> ಬಾಂಧವ್ಯ ಬೆಂಗಳೂರು. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</small>
+<!-- ── Footer ── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4"><div class="footer-brand kannada">ಬಾಂಧವ್ಯ ಬೆಂಗಳೂರು ಚಾರಿಟೆಬಲ್ ಟ್ರಸ್ಟ್ (ರಿ)</div><p class="footer-tagline mt-2">Connecting the Madhya Karnataka community in Bengaluru through culture, tradition and fellowship.</p></div>
+      <div class="col-sm-6 col-lg-2"><div class="footer-heading">Navigation</div><a class="footer-link" href="index.html">Home</a><a class="footer-link" href="about.html">About</a><a class="footer-link" href="committee.html">Committee</a><a class="footer-link" href="achievements.html">Achievements</a><a class="footer-link" href="gallery.html">Gallery</a><a class="footer-link" href="events.html">Events</a></div>
+      <div class="col-sm-6 col-lg-3"><div class="footer-heading">Contact</div><p class="footer-tagline">No. 654/B, 3rd Cross, Near BNES College, Mahalakshmi Layout, Bengaluru – 560086</p><a class="footer-link" href="mailto:bandhavyabangalore@gmail.com">bandhavyabangalore@gmail.com</a></div>
+      <div class="col-lg-3"><div class="footer-heading">Downloads</div><a class="footer-link d-flex align-items-center gap-2" href="assets/newsletters/namma-bandhavya.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf-fill text-danger"></i> ನಮ್ಮ ಬಾಂಧವ್ಯ Newsletter</a></div>
+    </div>
+    <hr class="footer-divider"/>
+    <div class="d-flex justify-content-between flex-wrap gap-2">
+      <span class="footer-copy">© <span id="year"></span> ಬಾಂಧವ್ಯ ಬೆಂಗಳೂರು. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</span>
+      <span class="footer-copy">Built with ❤️ for our community</span>
+    </div>
   </div>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-
-<!-- Gallery Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Footer year
   document.getElementById('year').textContent = new Date().getFullYear();
+  const root = document.documentElement;
+  const icon = document.getElementById('themeIcon');
+  const saved = localStorage.getItem('bbct-theme') || 'light';
+  root.setAttribute('data-theme', saved);
+  icon.className = saved === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next); localStorage.setItem('bbct-theme', next);
+    icon.className = next === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+  });
+  window.addEventListener('scroll', () => { document.getElementById('siteNavbar').classList.toggle('scrolled', window.scrollY > 20); });
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
   // Filter logic
-  const buttons = document.querySelectorAll('.filter-btn');
-  const items = document.querySelectorAll('.gallery-item');
-
-  buttons.forEach(btn => {
+  document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
       const filter = btn.dataset.filter;
-      items.forEach(item => {
-        item.style.display =
-          filter === 'all' || item.classList.contains(filter)
-            ? 'block'
-            : 'none';
+      document.querySelectorAll('.gallery-filter-item').forEach(item => {
+        const show = filter === 'all' || item.classList.contains(filter);
+        item.style.display = show ? '' : 'none';
       });
     });
   });
 
-  // Modal image loader
-  document.querySelectorAll('.gallery-img').forEach(img => {
-    img.addEventListener('click', () => {
-      document.getElementById('modalImage').src = img.dataset.img;
+  // Lightbox
+  document.querySelectorAll('[data-img]').forEach(el => {
+    el.addEventListener('click', () => { document.getElementById('lightboxImg').src = el.dataset.img; });
+  });
+
+  document.querySelectorAll('#mainNav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const nav = document.getElementById('mainNav');
+      const bsc = bootstrap.Collapse.getInstance(nav);
+      if (bsc && nav.classList.contains('show')) bsc.hide();
     });
   });
 </script>
-
 </body>
 </html>
