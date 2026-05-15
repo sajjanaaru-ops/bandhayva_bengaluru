@@ -1,0 +1,344 @@
+{
+  "categories": [
+    {
+      "id": "professionals",
+      "label": "Professionals",
+      "icon": "bi-person-badge-fill",
+      "color": "#C45E10",
+      "listings": [
+        {
+          "id": "pro-001",
+          "title": "CA / Tax Consultant Available",
+          "description": "Chartered Accountant with 12 years experience. Specialises in GST filing, income tax returns, and business audits. Home visits available.",
+          "location": "Mahalakshmi Layout, Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Email for appointment",
+          "postedDate": "2026-05-10"
+        },
+        {
+          "id": "pro-002",
+          "title": "Advocate — Civil & Family Law",
+          "description": "Practising advocate at Karnataka High Court. Expert in property disputes, family matters, and documentation. Community members get priority.",
+          "location": "Rajajinagar, Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Contact via email",
+          "postedDate": "2026-05-08"
+        },
+        {
+          "id": "pro-003",
+          "title": "Doctor — General Physician",
+          "description": "MBBS, MD. General consultations, preventive health check-ups. Available weekdays 9am–7pm. Home visits on request for senior community members.",
+          "location": "Vijayanagar, Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Book appointment",
+          "postedDate": "2026-05-05"
+        }
+      ]
+    },
+    {
+      "id": "matrimonial",
+      "label": "Matrimonial",
+      "icon": "bi-hearts",
+      "color": "#1A6B3C",
+      "listings": [
+        {
+          "id": "mat-001",
+          "title": "Groom Wanted — Software Engineer, 27",
+          "description": "Fair, 5'4\", B.Tech graduate, employed in MNC. From Davangere, family settled in Bengaluru. Seeks well-educated, professionally employed groom from our community.",
+          "location": "Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Send biodata",
+          "postedDate": "2026-05-12"
+        },
+        {
+          "id": "mat-002",
+          "title": "Bride Wanted — Doctor, 30",
+          "description": "MBBS, MD, 5'10\", working in reputed hospital. Family originally from Chitradurga. Seeks educated, family-oriented bride. Caste no bar for deserving matches.",
+          "location": "Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Send biodata",
+          "postedDate": "2026-05-09"
+        },
+        {
+          "id": "mat-003",
+          "title": "Groom Wanted — Teacher, 26",
+          "description": "B.Ed graduate, teaching in government school. 5'3\", homely nature. Family from Holalkere. Seeks stable, employed groom from Madhya Karnataka community.",
+          "location": "Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Contact family",
+          "postedDate": "2026-05-06"
+        }
+      ]
+    },
+    {
+      "id": "jobs-vacant",
+      "label": "Jobs Vacant",
+      "icon": "bi-briefcase-fill",
+      "color": "#7C3AED",
+      "listings": [
+        {
+          "id": "jv-001",
+          "title": "Accountant Required",
+          "description": "Retail firm in Rajajinagar seeks experienced accountant. Tally knowledge mandatory. 2+ years experience. Salary ₹18,000–₹25,000 p.m. Walk-in Mon–Sat.",
+          "location": "Rajajinagar, Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Send CV",
+          "postedDate": "2026-05-11"
+        },
+        {
+          "id": "jv-002",
+          "title": "Office Assistant / Receptionist",
+          "description": "Clinic in Mahalakshmi Layout requires female receptionist. Computer knowledge required. Freshers welcome. Timing: 9am–5pm. Salary negotiable.",
+          "location": "Mahalakshmi Layout, Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Apply now",
+          "postedDate": "2026-05-10"
+        },
+        {
+          "id": "jv-003",
+          "title": "Sales Executive — FMCG",
+          "description": "Growing FMCG company needs field sales executives. Two-wheeler mandatory. Attractive incentives + salary. Community preference. Immediate joining.",
+          "location": "Bengaluru (multiple areas)",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Apply by email",
+          "postedDate": "2026-05-08"
+        }
+      ]
+    },
+    {
+      "id": "jobs-wanted",
+      "label": "Jobs Wanted",
+      "icon": "bi-search-heart",
+      "color": "#0369A1",
+      "listings": [
+        {
+          "id": "jw-001",
+          "title": "Seeking Data Entry / Office Job",
+          "description": "Graduate, 24 years, good typing speed (50 WPM), MS Office proficient. Available immediately. Willing to work in any location within Bengaluru.",
+          "location": "Bengaluru (any area)",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Contact candidate",
+          "postedDate": "2026-05-13"
+        },
+        {
+          "id": "jw-002",
+          "title": "Driver — LMV / HMV Licence",
+          "description": "Experienced driver, 10 years, holds both LMV and HMV licence. Familiar with all Bengaluru routes. Available for full-time or part-time assignments.",
+          "location": "Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Contact candidate",
+          "postedDate": "2026-05-07"
+        }
+      ]
+    },
+    {
+      "id": "property",
+      "label": "Property",
+      "icon": "bi-house-fill",
+      "color": "#B45309",
+      "listings": [
+        {
+          "id": "prop-001",
+          "title": "2 BHK Flat For Rent",
+          "description": "Well-maintained 2 BHK, 2nd floor, 1050 sq.ft. Semi-furnished. Close to metro. Suitable for families. Rent ₹16,000 p.m. + maintenance. Available June 1.",
+          "location": "Mahalakshmi Layout, Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Enquire now",
+          "postedDate": "2026-05-12"
+        },
+        {
+          "id": "prop-002",
+          "title": "30×40 Site For Sale",
+          "description": "BDA approved 30×40 corner site. Clear title, east-facing. Residential zone. ₹85 lakhs negotiable. Genuine buyers only. No brokers please.",
+          "location": "Kengeri, Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Contact owner",
+          "postedDate": "2026-05-09"
+        },
+        {
+          "id": "prop-003",
+          "title": "PG Accommodation — Ladies",
+          "description": "Spacious PG for working women & students. 2–3 sharing rooms. Homely food available. 24hr security. Close to IT hub. ₹6,500–₹8,000 per month all inclusive.",
+          "location": "Vijayanagar, Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Book a visit",
+          "postedDate": "2026-05-06"
+        }
+      ]
+    },
+    {
+      "id": "automobiles",
+      "label": "Automobiles",
+      "icon": "bi-car-front-fill",
+      "color": "#1D4ED8",
+      "listings": [
+        {
+          "id": "auto-001",
+          "title": "Maruti Swift — 2019 For Sale",
+          "description": "Single owner, 42,000 km driven. Petrol, manual, Vxi trim. All insurance and PUC valid. Excellent condition. ₹5.80 lakhs. Genuine buyers only.",
+          "location": "Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Enquire",
+          "postedDate": "2026-05-11"
+        },
+        {
+          "id": "auto-002",
+          "title": "Honda Activa 6G — 2022",
+          "description": "Well-maintained scooter, 12,000 km, red colour. All documents clear. Genuine reason for selling. ₹68,000 negotiable.",
+          "location": "Rajajinagar, Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Contact seller",
+          "postedDate": "2026-05-08"
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "label": "Business Opportunities",
+      "icon": "bi-graph-up-arrow",
+      "color": "#9D174D",
+      "listings": [
+        {
+          "id": "biz-001",
+          "title": "Grocery Store Partnership Sought",
+          "description": "Established 8-year-old grocery shop seeks silent investor partner. Good footfall, prime location. ROI 18–22% p.a. Investment ₹5–10 lakhs. Accounts available for inspection.",
+          "location": "Mahalakshmi Layout, Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Discuss details",
+          "postedDate": "2026-05-10"
+        },
+        {
+          "id": "biz-002",
+          "title": "Franchise Opportunity — Bakery Brand",
+          "description": "Well-known Bengaluru bakery brand offering franchises. Low investment, training provided, exclusive territory. Ideal for homemakers or retired persons.",
+          "location": "Bengaluru (multiple zones)",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Request brochure",
+          "postedDate": "2026-05-07"
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "label": "Education / Courses",
+      "icon": "bi-mortarboard-fill",
+      "color": "#047857",
+      "listings": [
+        {
+          "id": "edu-001",
+          "title": "Home Tuition — Maths & Science",
+          "description": "Experienced tutor (M.Sc, B.Ed) offers home tuition for classes 8–10 and PU. CBSE, ICSE & State board. Kannada and English medium. Flexible timings.",
+          "location": "Mahalakshmi Layout area",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Enquire",
+          "postedDate": "2026-05-09"
+        },
+        {
+          "id": "edu-002",
+          "title": "Spoken English & Personality Development",
+          "description": "Weekend batch starting June. 6-week course. Certificate provided. Batch size limited to 10 students. Fee: ₹2,000. All age groups welcome.",
+          "location": "Rajajinagar, Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Enrol now",
+          "postedDate": "2026-05-06"
+        },
+        {
+          "id": "edu-003",
+          "title": "Computer Basics & Tally Classes",
+          "description": "Basic computing, MS Office and Tally ERP 9 training. Day & evening batches. Suitable for job seekers and homemakers. Affordable fees. Placement assistance.",
+          "location": "Vijayanagar, Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Contact institute",
+          "postedDate": "2026-05-04"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Services",
+      "icon": "bi-tools",
+      "color": "#6D28D9",
+      "listings": [
+        {
+          "id": "svc-001",
+          "title": "Catering Services — All Events",
+          "description": "Traditional Madhya Karnataka cuisine catering for functions, marriages, naming ceremonies and corporate events. Min. 50 pax. Vegetarian & non-vegetarian menus.",
+          "location": "Bengaluru & surroundings",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Get quote",
+          "postedDate": "2026-05-11"
+        },
+        {
+          "id": "svc-002",
+          "title": "Plumbing & Electrical Repairs",
+          "description": "Licensed plumber and electrician. Quick response. All repairs, installations and maintenance work. Reasonable rates for community members. Available 7 days.",
+          "location": "Bengaluru (West & North zones)",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Call for service",
+          "postedDate": "2026-05-08"
+        },
+        {
+          "id": "svc-003",
+          "title": "Photography & Videography",
+          "description": "Professional photographer for weddings, events, portraits and product shoots. Drone coverage available. Album printing also done. Packages starting ₹8,000.",
+          "location": "Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Book now",
+          "postedDate": "2026-05-05"
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "label": "Travel & Tours",
+      "icon": "bi-airplane-fill",
+      "color": "#0F766E",
+      "listings": [
+        {
+          "id": "trv-001",
+          "title": "Char Dham Yatra Package — June",
+          "description": "Special pilgrimage package: Badrinath, Kedarnath, Gangotri, Yamunotri. 14 nights / 15 days. Includes flight, hotel, meals & guide. Community group discount available.",
+          "location": "Departure from Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Book seats",
+          "postedDate": "2026-05-13"
+        },
+        {
+          "id": "trv-002",
+          "title": "Goa Group Tour — August",
+          "description": "Fun-filled 5 nights / 6 days Goa package. AC coach from Bengaluru. Hotel, breakfast & dinner included. Price ₹9,500 per person. Families welcome. Limited seats.",
+          "location": "Departure from Bengaluru",
+          "contact": "bandhavyabangalore@gmail.com",
+          "contactType": "email",
+          "contactLabel": "Reserve your seat",
+          "postedDate": "2026-05-10"
+        }
+      ]
+    }
+  ]
+}

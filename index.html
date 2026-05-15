@@ -35,6 +35,7 @@
         <a class="nav-link" href="achievements.html">Achievements</a>
         <a class="nav-link" href="gallery.html">Gallery</a>
         <a class="nav-link" href="events.html">Events</a>
+        <a class="nav-link" href="classifieds.html">Classifieds</a>
         <a class="nav-link" href="#contact">Contact</a>
         <button class="btn-theme ms-2" id="themeToggle" title="Toggle dark mode">
           <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
@@ -262,6 +263,7 @@
           <a class="footer-link" href="achievements.html">Achievements</a>
           <a class="footer-link" href="gallery.html">Gallery</a>
           <a class="footer-link" href="events.html">Events</a>
+          <a class="footer-link" href="classifieds.html">Classifieds</a>
         </div>
         <div class="col-sm-6 col-lg-3">
           <div class="footer-heading">Contact</div>
@@ -301,8 +303,8 @@
   <!-- ── Sticky Ad ── -->
   <div id="adRibbon" class="ad-ribbon d-none" role="region" aria-label="Sponsored">
     <div class="container d-flex align-items-center justify-content-between gap-2">
-      <a href="#" target="_blank" rel="noopener nofollow sponsored" class="flex-grow-1">
-        <img src="assets/images/ads/example_comm_ad4.jpg" alt="Sponsored" loading="lazy" />
+      <a href="https://radhewebstudio.com" target="_blank" rel="noopener nofollow sponsored" class="flex-grow-1" aria-label="Radhe Web Studio — Premium websites">
+        <img src="assets/images/ads/radhe-webstudio-ad.png" alt="Radhe Web Studio — Premium sites that convert" loading="lazy" />
       </a>
       <button class="btn-theme" id="adRibbonClose" aria-label="Close advertisement" title="Close">×</button>
     </div>
@@ -386,11 +388,8 @@
 
     // ── Ad ribbon
     const ribbon = document.getElementById('adRibbon');
-    if (!sessionStorage.getItem('ad_closed')) {
-      setTimeout(() => ribbon && ribbon.classList.remove('d-none'), 1200);
-    }
+    setTimeout(() => ribbon && ribbon.classList.remove('d-none'), 1200);
     document.getElementById('adRibbonClose')?.addEventListener('click', () => {
-      sessionStorage.setItem('ad_closed', '1');
       ribbon.classList.add('d-none');
     });
   </script>
