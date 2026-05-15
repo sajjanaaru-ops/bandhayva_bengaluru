@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Classifieds | Bandhavya Bengaluru</title>
+  <meta name="description"
+    content="Community classifieds — jobs, matrimonial, property, services and more for the Bandhavya Bengaluru community." />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <style>
+    /* ── Newspaper Masthead ── */
+    .cl-masthead {
+      background: var(--brand-dark);
+      color: #fff;
+      text-align: center;
+      padding: 18px 0 14px;
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .cl-masthead-title {
+      font-size: clamp(1.6rem, 5vw, 2.8rem);
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+    }
+
+    .cl-masthead-sub {
+      font-size: .8rem;
+      color: rgba(255, 255, 255, .7);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .cl-masthead-date {
+      font-size: .78rem;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    /* ── Toolbar ── */
+    .cl-toolbar {
+      background: var(--bg-muted);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+      position: sticky;
+      top: var(--navbar-h);
+      z-index: 900;
+    }
+
+    .cl-search {
+      flex: 1;
+      max-width: 420px;
+      display: flex;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 7px 14px;
+      gap: 8px;
+    }
+
+    .cl-search i {
+      color: var(--text-muted);
+    }
+
+    .cl-search input {
+      border: none;
+      outline: none;
+      background: transparent;
+      color: var(--text);
+      font-size: .9rem;
+      width: 100%;
+      font-family: inherit;
+    }
+
+    .cl-search input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .cl-count {
+      font-size: .82rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    /* ── Newspaper Grid ── */
+    .cl-board {
+      padding: 24px 0 40px;
+    }
+
+    .cl-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    @media(max-width:1100px) {
+      .cl-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media(max-width:767px) {
+      .cl-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:480px) {
+      .cl-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── Category Column ── */
+    .cl-col {
+      border-right: 1.5px solid var(--border);
+      border-bottom: 1.5px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .cl-col:last-child {
+      border-right: none;
+    }
+
+    .cl-col-header {
+      padding: 9px 12px 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 2px solid var(--border);
+      position: sticky;
+    }
+
+    .cl-col-header i {
+      font-size: 1rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .cl-col-header span {
+      font-size: .78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    /* ── Listing Entry ── */
+    .cl-listing {
+      padding: 10px 12px 9px;
+      border-bottom: 1px dashed var(--border);
+      transition: background var(--transition);
+    }
+
+    .cl-listing:last-of-type {
+      border-bottom: none;
+    }
+
+    .cl-listing:hover {
+      background: var(--bg-muted);
+    }
+
+    .cl-listing-title {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .cl-listing-desc {
+      font-size: .76rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 5px;
+    }
+
+    .cl-listing-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .cl-meta-loc {
+      font-size: .7rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .cl-meta-date {
+      font-size: .68rem;
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+
+    .cl-contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--brand);
+      background: rgba(196, 94, 16, .08);
+      border: 1px solid rgba(196, 94, 16, .2);
+      border-radius: 99px;
+      padding: 2px 10px;
+      text-decoration: none;
+      transition: all var(--transition);
+      margin-top: 5px;
+    }
+
+    .cl-contact-btn:hover {
+      background: var(--brand);
+      color: #fff;
+      border-color: var(--brand);
+    }
+
+    /* ── Add listing footer in column ── */
+    .cl-add-row {
+      margin-top: auto;
+      padding: 7px 12px;
+      background: var(--bg-muted);
+      border-top: 1px dashed var(--border);
+    }
+
+    .cl-add-btn {
+      font-size: .72rem;
+      color: var(--brand);
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .cl-add-btn:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Empty state ── */
+    .cl-empty {
+      padding: 18px 12px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: .78rem;
+    }
+
+    /* ── Hidden column (search filter) ── */
+    .cl-col.hidden {
+      display: none;
+    }
+
+    /* ── Post Modal ── */
+    .post-modal-header {
+      background: linear-gradient(135deg, var(--brand-dark), var(--brand-light));
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+    }
+
+    .post-modal-header .btn-close {
+      filter: invert(1);
+    }
+
+    .post-label {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .post-input {
+      width: 100%;
+      padding: 9px 13px;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-size: .88rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+
+    .post-input:focus {
+      border-color: var(--brand);
+    }
+
+    .post-input::placeholder {
+      color: var(--text-muted);
+    }
+
+    textarea.post-input {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    /* ── No results banner ── */
+    #noResults {
+      display: none;
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Topbar ── -->
+  <div class="topbar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span><i class="bi bi-envelope me-1"></i><a
+          href="mailto:bandhavyabangalore@gmail.com">bandhavyabangalore@gmail.com</a></span>
+      <span class="kannada" style="font-size:.82rem;color:rgba(255,255,255,.75);">ಬಾಂಧವ್ಯ ಬೆಂಗಳೂರು ಚಾರಿಟೆಬಲ್ ಟ್ರಸ್ಟ್
+        (ರಿ)</span>
+    </div>
+  </div>
+
+  <!-- ── Navbar ── -->
+  <nav class="site-navbar" id="siteNavbar">
+    <div class="container h-100 d-flex align-items-center justify-content-between">
+      <a class="navbar-brand-logo" href="index.html">
+        <img src="assets/images/logos/logo.png" alt="Bandhavya Bengaluru Logo" class="nav-logo" />
+        <span class="navbar-brand-text kannada">ಬಾಂಧವ್ಯ ಬೆಂಗಳೂರು<br /><small>ಚಾರಿಟೆಬಲ್ ಟ್ರಸ್ಟ್ (ರಿ)</small></span>
+      </a>
+      <button class="navbar-toggler d-lg-none border-0 bg-transparent" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"
+        style="font-size:1.4rem;color:var(--text);">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse d-lg-flex align-items-center gap-1" id="mainNav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="committee.html">Committee</a>
+        <a class="nav-link" href="achievements.html">Achievements</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
+        <a class="nav-link" href="events.html">Events</a>
+        <a class="nav-link active" href="classifieds.html">Classifieds</a>
+        <a class="nav-link" href="index.html#contact">Contact</a>
+        <button class="btn-theme ms-2" id="themeToggle" title="Toggle dark mode">
+          <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Masthead ── -->
+  <div class="cl-masthead">
+    <div class="cl-masthead-title"><i class="bi bi-newspaper me-2"></i>Bandhavya Classifieds</div>
+    <div class="cl-masthead-sub">Community listings — Bengaluru</div>
+    <div class="cl-masthead-date" id="masterDate"></div>
+  </div>
+
+  <!-- ── Toolbar ── -->
+  <div class="cl-toolbar">
+    <div class="container d-flex align-items-center gap-3 flex-wrap">
+      <div class="cl-search">
+        <i class="bi bi-search"></i>
+        <input type="text" id="clSearch" placeholder="Search all listings…" autocomplete="off" />
+      </div>
+      <span class="cl-count" id="clCount"></span>
+      <button class="btn-brand ms-auto" style="font-size:.82rem;padding:8px 18px;" data-bs-toggle="modal"
+        data-bs-target="#postModal" id="postListingBtn">
+        <i class="bi bi-plus-circle-fill"></i> Post a Listing
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Board ── -->
+  <section class="cl-board">
+    <div class="container-fluid px-3">
+      <div class="cl-grid" id="clGrid">
+        <!-- Columns injected by JS -->
+      </div>
+      <div id="noResults">
+        <i class="bi bi-search" style="font-size:2.5rem;display:block;margin-bottom:12px;"></i>
+        <strong>No listings found</strong><br>
+        <span style="font-size:.88rem;">Try a different keyword or <a href="#" data-bs-toggle="modal"
+            data-bs-target="#postModal">post a listing</a>.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-brand kannada">ಬಾಂಧವ್ಯ ಬೆಂಗಳೂರು ಚಾರಿಟೆಬಲ್ ಟ್ರಸ್ಟ್ (ರಿ)</div>
+          <p class="footer-tagline mt-2">Connecting the Madhya Karnataka community in Bengaluru through culture,
+            tradition and fellowship.</p>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <div class="footer-heading">Navigation</div>
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="about.html">About</a>
+          <a class="footer-link" href="committee.html">Committee</a>
+          <a class="footer-link" href="achievements.html">Achievements</a>
+          <a class="footer-link" href="gallery.html">Gallery</a>
+          <a class="footer-link" href="events.html">Events</a>
+          <a class="footer-link" href="classifieds.html">Classifieds</a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-heading">Contact</div>
+          <p class="footer-tagline">No. 654/B, 3rd Cross, Near BNES College, Mahalakshmi Layout, Bengaluru – 560086</p>
+          <a class="footer-link" href="mailto:bandhavyabangalore@gmail.com">bandhavyabangalore@gmail.com</a>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-heading">Downloads</div>
+          <a class="footer-link d-flex align-items-center gap-2" href="assets/newsletters/namma-bandhavya.pdf"
+            target="_blank" rel="noopener">
+            <i class="bi bi-file-earmark-pdf-fill text-danger"></i> ನಮ್ಮ ಬಾಂಧವ್ಯ Newsletter
+          </a>
+          <a class="footer-link" href="sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="d-flex justify-content-between flex-wrap gap-2">
+        <span class="footer-copy">© <span id="year"></span> ಬಾಂಧವ್ಯ ಬೆಂಗಳೂರು. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</span>
+        <span class="footer-copy">Built with ❤️ for our community</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Post a Listing Modal ── -->
+  <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content"
+        style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+        <div class="post-modal-header d-flex align-items-center justify-content-between p-4">
+          <div>
+            <h2 class="mb-0" style="color:#fff;font-size:1.2rem;" id="postModalLabel"><i
+                class="bi bi-plus-circle-fill me-2"></i>Post a Classified Listing</h2>
+            <p class="mb-0 mt-1" style="font-size:.8rem;color:rgba(255,255,255,.75);">Fill in the details below. We'll
+              review and publish your listing.Please Give a call to Mr. Arun Kumar K T after the mail has been sent.</p>
+          </div>
+          <button type="button" class="btn-close post-modal-header" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="p-4">
+          <form id="postForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="post-label" for="pf-name">Your Name *</label>
+                <input class="post-input" type="text" id="pf-name" placeholder="Full name" required />
+              </div>
+              <div class="col-md-6">
+                <label class="post-label" for="pf-phone">Phone / Email *</label>
+                <input class="post-input" type="text" id="pf-phone" placeholder="Contact details" required />
+              </div>
+              <div class="col-md-6">
+                <label class="post-label" for="pf-category">Category *</label>
+                <select class="post-input" id="pf-category" required>
+                  <option value="">— Select category —</option>
+                  <option value="Professionals">Professionals</option>
+                  <option value="Matrimonial">Matrimonial</option>
+                  <option value="Jobs Vacant">Jobs Vacant</option>
+                  <option value="Jobs Wanted">Jobs Wanted</option>
+                  <option value="Property">Property</option>
+                  <option value="Automobiles">Automobiles</option>
+                  <option value="Business Opportunities">Business Opportunities</option>
+                  <option value="Education / Courses">Education / Courses</option>
+                  <option value="Services">Services</option>
+                  <option value="Travel &amp; Tours">Travel &amp; Tours</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="post-label" for="pf-title">Listing Title *</label>
+                <input class="post-input" type="text" id="pf-title" placeholder="e.g. 2 BHK Flat for Rent" required />
+              </div>
+              <div class="col-12">
+                <label class="post-label" for="pf-location">Location</label>
+                <input class="post-input" type="text" id="pf-location" placeholder="Area, Bengaluru" />
+              </div>
+              <div class="col-12">
+                <label class="post-label" for="pf-desc">Description *</label>
+                <textarea class="post-input" id="pf-desc" placeholder="Describe your listing in detail…"
+                  required></textarea>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mt-4">
+              <button type="submit" class="btn-brand" id="pf-submit"><i class="bi bi-send-fill"></i> Submit via
+                Email</button>
+              <button type="button" class="btn-outline-brand" data-bs-dismiss="modal">Cancel</button>
+            </div>
+            <p class="mt-3 mb-0" style="font-size:.75rem;color:var(--text-muted);">
+              <i class="bi bi-info-circle me-1"></i>Clicking "Submit" will open your email app with a pre-filled message
+              to our team.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* ── Boilerplate ── */
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('masterDate').textContent =
+      new Date().toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+    const root = document.documentElement;
+    const icon = document.getElementById('themeIcon');
+    const saved = localStorage.getItem('bbct-theme') || 'light';
+    root.setAttribute('data-theme', saved);
+    icon.className = saved === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('bbct-theme', next);
+      icon.className = next === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('siteNavbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+    document.querySelectorAll('#mainNav .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('mainNav');
+        const bsc = bootstrap.Collapse.getInstance(nav);
+        if (bsc && nav.classList.contains('show')) bsc.hide();
+      });
+    });
+
+    /* ── Load & Render Classifieds ── */
+    let allData = [];
+
+    function formatDate(str) {
+      const d = new Date(str);
+      return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+
+    function buildGrid(data) {
+      const grid = document.getElementById('clGrid');
+      grid.innerHTML = '';
+      let totalListings = 0;
+
+      data.categories.forEach(cat => {
+        totalListings += cat.listings.length;
+        const col = document.createElement('div');
+        col.className = 'cl-col';
+        col.dataset.catId = cat.id;
+
+        /* Header */
+        const hdr = document.createElement('div');
+        hdr.className = 'cl-col-header';
+        hdr.style.background = cat.color;
+        hdr.innerHTML = `<i class="bi ${cat.icon}"></i><span>${cat.label}</span>`;
+        col.appendChild(hdr);
+
+        /* Listings */
+        if (cat.listings.length === 0) {
+          const emp = document.createElement('div');
+          emp.className = 'cl-empty';
+          emp.innerHTML = `<i class="bi bi-inbox" style="font-size:1.4rem;display:block;margin-bottom:6px;"></i>No listings yet`;
+          col.appendChild(emp);
+        } else {
+          cat.listings.forEach(listing => {
+            const entry = document.createElement('div');
+            entry.className = 'cl-listing';
+            entry.dataset.search = (listing.title + ' ' + listing.description + ' ' + listing.location).toLowerCase();
+            const href = listing.contactType === 'email'
+              ? `mailto:bandhavyabangalore@gmail.com?subject=Classified Enquiry: ${encodeURIComponent(listing.title)}`
+              : `tel:${listing.contact}`;
+            entry.innerHTML = `
+            <div class="cl-listing-title">${listing.title}</div>
+            <div class="cl-listing-desc">${listing.description}</div>
+            <div class="cl-listing-meta">
+              <span class="cl-meta-loc"><i class="bi bi-geo-alt-fill"></i>${listing.location}</span>
+              <span class="cl-meta-date">${formatDate(listing.postedDate)}</span>
+            </div>
+            <a href="${href}" class="cl-contact-btn" target="${listing.contactType === 'email' ? '_blank' : '_self'}">
+              <i class="bi bi-${listing.contactType === 'email' ? 'envelope-fill' : 'telephone-fill'}"></i>
+              ${listing.contactLabel}
+            </a>`;
+            col.appendChild(entry);
+          });
+        }
+
+        /* Add listing footer */
+        const addRow = document.createElement('div');
+        addRow.className = 'cl-add-row';
+        addRow.innerHTML = `<button class="cl-add-btn" data-bs-toggle="modal" data-bs-target="#postModal" onclick="document.getElementById('pf-category').value='${cat.label}'"><i class="bi bi-plus-circle"></i> Add listing</button>`;
+        col.appendChild(addRow);
+
+        grid.appendChild(col);
+      });
+
+      document.getElementById('clCount').textContent = `${totalListings} listing${totalListings !== 1 ? 's' : ''} across ${data.categories.length} categories`;
+    }
+
+    /* ── Search ── */
+    function applySearch(term) {
+      const cols = document.querySelectorAll('.cl-col');
+      let visibleCols = 0;
+      cols.forEach(col => {
+        const listings = col.querySelectorAll('.cl-listing');
+        let colVisible = 0;
+        listings.forEach(l => {
+          const match = !term || l.dataset.search.includes(term.toLowerCase());
+          l.style.display = match ? '' : 'none';
+          if (match) colVisible++;
+        });
+        if (term && colVisible === 0) {
+          col.classList.add('hidden');
+        } else {
+          col.classList.remove('hidden');
+          visibleCols++;
+        }
+      });
+      document.getElementById('noResults').style.display = (visibleCols === 0) ? 'block' : 'none';
+      document.getElementById('clGrid').style.display = (visibleCols === 0) ? 'none' : '';
+    }
+
+    document.getElementById('clSearch').addEventListener('input', e => {
+      applySearch(e.target.value.trim());
+    });
+
+    /* ── Post Form ── */
+    document.getElementById('postForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('pf-name').value;
+      const phone = document.getElementById('pf-phone').value;
+      const category = document.getElementById('pf-category').value;
+      const title = document.getElementById('pf-title').value;
+      const location = document.getElementById('pf-location').value;
+      const desc = document.getElementById('pf-desc').value;
+      const subject = encodeURIComponent(`New Classified: [${category}] ${title}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nContact: ${phone}\nCategory: ${category}\nTitle: ${title}\nLocation: ${location}\n\nDescription:\n${desc}`
+      );
+      window.location.href = `mailto:bandhavyabangalore@gmail.com?subject=${subject}&body=${body}`;
+    });
+
+    /* ── Fetch data ── */
+    fetch('data/classifieds.json')
+      .then(r => r.json())
+      .then(data => { allData = data; buildGrid(data); })
+      .catch(() => {
+        document.getElementById('clGrid').innerHTML =
+          `<div style="padding:40px;text-align:center;color:var(--text-muted);grid-column:1/-1;">
+          <i class="bi bi-exclamation-circle" style="font-size:2rem;display:block;margin-bottom:10px;"></i>
+          Could not load listings. Please try again later.
+        </div>`;
+      });
+  </script>
+
+  <!-- ── Sticky Ad — Radhe Web Studio ── -->
+  <div id="adRibbon" class="ad-ribbon d-none" role="region" aria-label="Sponsored">
+    <div class="container d-flex align-items-center justify-content-between gap-2">
+      <a href="https://radhewebstudio.com" target="_blank" rel="noopener nofollow sponsored"
+         class="flex-grow-1" aria-label="Radhe Web Studio — Premium websites">
+        <img src="assets/images/ads/radhe-webstudio-ad.png"
+             alt="Radhe Web Studio — Premium sites that convert" loading="lazy" />
+      </a>
+      <button class="btn-theme" id="adRibbonClose" aria-label="Close advertisement" title="Close">×</button>
+    </div>
+  </div>
+
+  <script>
+    // Ad ribbon — always show after 1.2s; close hides for this session
+    const ribbon = document.getElementById('adRibbon');
+    setTimeout(() => ribbon && ribbon.classList.remove('d-none'), 1200);
+    document.getElementById('adRibbonClose')?.addEventListener('click', () => {
+      ribbon.classList.add('d-none');
+    });
+  </script>
+</body>
+
+</html>

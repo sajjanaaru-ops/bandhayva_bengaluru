@@ -848,13 +848,19 @@ section { scroll-margin-top: var(--navbar-h); }
 .ad-ribbon {
   position: fixed;
   bottom: 0; left: 0; right: 0;
-  background: var(--bg-card);
-  border-top: 1px solid var(--border);
+  background: #111;
+  border-top: 2px solid #C9921C;
   z-index: 1040;
-  padding: 8px 0;
-  box-shadow: 0 -4px 16px rgba(0,0,0,.1);
+  padding: 6px 0;
+  box-shadow: 0 -4px 24px rgba(0,0,0,.35);
 }
-.ad-ribbon img { max-height: 56px; width: auto; }
+.ad-ribbon img {
+  max-height: 110px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 6px;
+}
 
 /* =====================================================
    FILTER BUTTONS (Gallery)
@@ -906,3 +912,114 @@ section { scroll-margin-top: var(--navbar-h); }
   .stat-number { font-size: 2.2rem; }
   .gallery-grid { columns: 2; }
 }
+
+/* =====================================================
+   CLASSIFIEDS PAGE
+   ===================================================== */
+.classified-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+.classified-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand), var(--gold));
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+.classified-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  color: inherit;
+  text-decoration: none;
+}
+.classified-icon-wrap {
+  width: 60px; height: 60px;
+  background: rgba(196,94,16,.10);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+  color: var(--brand);
+  margin-bottom: 18px;
+  transition: background var(--transition), transform var(--transition);
+  flex-shrink: 0;
+}
+.classified-card:hover .classified-icon-wrap {
+  background: var(--brand);
+  color: #fff;
+  transform: scale(1.08);
+}
+.classified-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.classified-desc {
+  font-size: .88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: 18px;
+}
+.classified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--brand);
+  background: rgba(196,94,16,.08);
+  border: 1px solid rgba(196,94,16,.18);
+  padding: 4px 12px;
+  border-radius: 99px;
+  transition: background var(--transition), color var(--transition);
+}
+.classified-card:hover .classified-badge {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+/* CTA banner */
+.classifieds-cta {
+  background: linear-gradient(135deg, var(--brand-dark), var(--brand-light));
+  border-radius: var(--radius-lg);
+  padding: 52px 40px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.classifieds-cta::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 240px; height: 240px;
+  background: rgba(255,255,255,.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.classifieds-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; left: -40px;
+  width: 180px; height: 180px;
+  background: rgba(255,255,255,.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.classifieds-cta h2 { color: #fff; }
+.classifieds-cta p { color: rgba(255,255,255,.82); }
