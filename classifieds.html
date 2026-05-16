@@ -210,26 +210,32 @@
       margin-left: auto;
     }
 
-    .cl-contact-btn {
+    .cl-call-btn {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
       font-size: .7rem;
-      font-weight: 600;
-      color: var(--brand);
-      background: rgba(196, 94, 16, .08);
-      border: 1px solid rgba(196, 94, 16, .2);
+      font-weight: 700;
+      color: #16a34a;
+      background: rgba(22, 163, 74, .09);
+      border: 1.5px solid rgba(22, 163, 74, .3);
       border-radius: 99px;
-      padding: 2px 10px;
+      padding: 3px 12px;
       text-decoration: none;
       transition: all var(--transition);
       margin-top: 5px;
+      letter-spacing: .3px;
     }
 
-    .cl-contact-btn:hover {
-      background: var(--brand);
+    .cl-call-btn:hover {
+      background: #16a34a;
       color: #fff;
-      border-color: var(--brand);
+      border-color: #16a34a;
+      box-shadow: 0 2px 8px rgba(22, 163, 74, .25);
+    }
+
+    .cl-call-btn i {
+      font-size: .75rem;
     }
 
     /* ── Add listing footer in column ── */
@@ -580,9 +586,7 @@
             const entry = document.createElement('div');
             entry.className = 'cl-listing';
             entry.dataset.search = (listing.title + ' ' + listing.description + ' ' + listing.location).toLowerCase();
-            const href = listing.contactType === 'email'
-              ? `mailto:bandhavyabangalore@gmail.com?subject=Classified Enquiry: ${encodeURIComponent(listing.title)}`
-              : `tel:${listing.contact}`;
+            const callHref = `tel:${listing.contact}`;
             entry.innerHTML = `
             <div class="cl-listing-title">${listing.title}</div>
             <div class="cl-listing-desc">${listing.description}</div>
@@ -590,8 +594,8 @@
               <span class="cl-meta-loc"><i class="bi bi-geo-alt-fill"></i>${listing.location}</span>
               <span class="cl-meta-date">${formatDate(listing.postedDate)}</span>
             </div>
-            <a href="${href}" class="cl-contact-btn" target="${listing.contactType === 'email' ? '_blank' : '_self'}">
-              <i class="bi bi-${listing.contactType === 'email' ? 'envelope-fill' : 'telephone-fill'}"></i>
+            <a href="${callHref}" class="cl-call-btn">
+              <i class="bi bi-telephone-fill"></i>
               ${listing.contactLabel}
             </a>`;
             col.appendChild(entry);
