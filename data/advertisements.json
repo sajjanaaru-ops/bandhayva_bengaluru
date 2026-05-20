@@ -1,0 +1,182 @@
+{
+  "ads": [
+    {
+      "id": 1,
+      "image": "",
+      "productName": "Sharma & Sons Jewellers",
+      "tagline": "Pure Gold, Diamond & Silver Jewellery — Trusted for 25 Years",
+      "advertiserName": "Ramesh Sharma",
+      "advertiserType": "company",
+      "links": [
+        { "label": "Shop on Amazon", "url": "https://amazon.in", "icon": "bi-bag-fill" },
+        { "label": "Visit Website", "url": "https://example.com", "icon": "bi-globe" }
+      ],
+      "cta": {
+        "type": "call",
+        "value": "+919876543210",
+        "label": "Call Now"
+      },
+      "badge": "Featured",
+      "active": true
+    },
+    {
+      "id": 2,
+      "image": "",
+      "productName": "Prakash Real Estate",
+      "tagline": "Your Dream Home in Bengaluru — Flats, Plots & Villas",
+      "advertiserName": "Prakash Gowda & Associates",
+      "advertiserType": "company",
+      "links": [
+        { "label": "View Listings", "url": "https://example.com", "icon": "bi-house-fill" }
+      ],
+      "cta": {
+        "type": "call",
+        "value": "+919845012345",
+        "label": "Enquire Now"
+      },
+      "badge": "New",
+      "active": true
+    },
+    {
+      "id": 3,
+      "image": "",
+      "productName": "Annapurna Catering",
+      "tagline": "Traditional Cuisine for Weddings, Functions & Corporate Events",
+      "advertiserName": "Savitha Naik",
+      "advertiserType": "person",
+      "links": [],
+      "cta": {
+        "type": "call",
+        "value": "+919731234567",
+        "label": "Book Now"
+      },
+      "badge": "",
+      "active": true
+    },
+    {
+      "id": 4,
+      "image": "",
+      "productName": "Sri Sai Travels",
+      "tagline": "Pilgrimages, Tour Packages & Bus Rentals Across Karnataka",
+      "advertiserName": "Suresh Kumar",
+      "advertiserType": "person",
+      "links": [
+        { "label": "View Packages", "url": "https://example.com", "icon": "bi-map-fill" }
+      ],
+      "cta": {
+        "type": "email",
+        "value": "srisaitravels@gmail.com",
+        "label": "Send Enquiry"
+      },
+      "badge": "Popular",
+      "active": true
+    },
+    {
+      "id": 5,
+      "image": "",
+      "productName": "Lakshmi Silks",
+      "tagline": "Sarees, Dress Materials & Ethnic Wear — All Occasions",
+      "advertiserName": "Lakshmi Textiles Pvt. Ltd.",
+      "advertiserType": "company",
+      "links": [
+        { "label": "Shop on Meesho", "url": "https://meesho.com", "icon": "bi-bag-heart-fill" },
+        { "label": "WhatsApp Catalog", "url": "https://wa.me/919900112233", "icon": "bi-whatsapp" }
+      ],
+      "cta": {
+        "type": "call",
+        "value": "+919900112233",
+        "label": "Call to Order"
+      },
+      "badge": "Featured",
+      "active": true
+    },
+    {
+      "id": 6,
+      "image": "",
+      "productName": "Dr. Rajesh Dental Clinic",
+      "tagline": "Complete Dental Care — Implants, Braces & Cosmetic Dentistry",
+      "advertiserName": "Dr. Rajesh Patil",
+      "advertiserType": "person",
+      "links": [
+        { "label": "Book Appointment", "url": "https://example.com", "icon": "bi-calendar-check-fill" }
+      ],
+      "cta": {
+        "type": "call",
+        "value": "+918022334455",
+        "label": "Book Appointment"
+      },
+      "badge": "",
+      "active": true
+    },
+    {
+      "id": 7,
+      "image": "",
+      "productName": "Namma Tutors Academy",
+      "tagline": "Expert Home Tuition for Classes 1–12 — All Subjects",
+      "advertiserName": "Meena Hegde",
+      "advertiserType": "person",
+      "links": [],
+      "cta": {
+        "type": "call",
+        "value": "+917676543210",
+        "label": "Enquire Now"
+      },
+      "badge": "New",
+      "active": true
+    },
+    {
+      "id": 8,
+      "image": "",
+      "productName": "Vasudha Organic Farm",
+      "tagline": "Fresh Organic Vegetables & Fruits — Home Delivery in Bengaluru",
+      "advertiserName": "Vasudha Agro Products",
+      "advertiserType": "company",
+      "links": [
+        { "label": "Order on Amazon Fresh", "url": "https://amazon.in", "icon": "bi-bag-fill" }
+      ],
+      "cta": {
+        "type": "call",
+        "value": "+919611223344",
+        "label": "Order Now"
+      },
+      "badge": "",
+      "active": true
+    },
+    {
+      "id": 9,
+      "image": "",
+      "productName": "Ganesh Financial Services",
+      "tagline": "Insurance, Mutual Funds, Loans & Tax Filing — Expert Guidance",
+      "advertiserName": "Ganesh Murthy",
+      "advertiserType": "person",
+      "links": [
+        { "label": "Free Consultation", "url": "https://example.com", "icon": "bi-calendar2-check-fill" }
+      ],
+      "cta": {
+        "type": "email",
+        "value": "ganesh.financial@gmail.com",
+        "label": "Send Query"
+      },
+      "badge": "Trusted",
+      "active": true
+    },
+    {
+      "id": 10,
+      "image": "",
+      "productName": "Ravi Interior Works",
+      "tagline": "Modular Kitchens, Wardrobes & Full Home Interior Design",
+      "advertiserName": "Ravi Constructions",
+      "advertiserType": "company",
+      "links": [
+        { "label": "See Portfolio", "url": "https://example.com", "icon": "bi-images" }
+      ],
+      "cta": {
+        "type": "call",
+        "value": "+919008887766",
+        "label": "Get Free Quote"
+      },
+      "badge": "",
+      "active": true
+    }
+  ]
+}
